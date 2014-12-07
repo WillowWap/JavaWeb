@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./Template_Basic.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <h:outputLabel value ="#{msg.NameInsc}" for = "Name"></h:outputLabel>
+                    <h:inputText id="Name" required="true" requiredMessage="Name is required" value=""> </h:inputText><br/>
+                    <h:message for="userName"/>
+                    
+                     <h:outputLabel value ="#{msg.FirstNameInsc}" for = "FirstName"></h:outputLabel>
+                    <h:inputText id="FirstName" required="true" requiredMessage="First name is required" value=""> </h:inputText><br/>
+                    <h:message for="FirstName"/>
+                    
+                     <h:outputLabel value ="#{msg.MailAddInsc}" for = "MailAddress"></h:outputLabel>
+                    <h:inputText id="MailAddress" required="true" requiredMessage="Mail address is required" value=""> </h:inputText><br/>
+                    <h:message for="MailAddress"/>
+                    
+                     <h:outputLabel value ="#{msg.PasswordInsc}" for = "Password"></h:outputLabel>
+                    <h:inputText id="Password" required="true" requiredMessage="Mail address is required" value=""> </h:inputText><br/>
+                    <h:message for="Password"/>
+                    
+                    <h:outputLabel value ="#{msg.ConfirmPasswordInsc}" for = "Password"></h:outputLabel>
+                    <h:inputText id="PasswordConfirmation" required="true" requiredMessage="Mail address is required" value=""> </h:inputText><br/>
+                    <h:message for="Password"/>
+                    
+                     <h:outputLabel value ="#{msg.BirthdateInsc}" for = "Birthdate"></h:outputLabel>
+                    <h:inputText id="Birthdate" required="true" requiredMessage="Birthdate is required" value=""> </h:inputText><br/>
+                    <h:message for="Birthdate"/>
+                    
+                     <h:outputLabel value ="#{msg.AdresseInsc}" for = "Address"></h:outputLabel>
+                    <h:inputText id="Address" required="true" requiredMessage="Address is required" value=""> </h:inputText><br/>
+                    <h:message for="Address"/>
+                    
+                     <h:outputLabel value ="#{msg.PhoneNumberInsc}" for = "PhoneNumber"></h:outputLabel>
+                    <h:inputText id="PhoneNumber" value=""> </h:inputText><br/>
+                </h:form>   
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+     <f:loadBundle basename="languages.lang" var="msg"/>
+     <f:view locale="#{internationalizationManagedBeans.locale}">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/default.css"/>
+        <h:outputStylesheet name="./css/cssLayout.css"/>
+        <title>Disney market</title>
+    </h:head>
+
+    <h:body>
+
+        <div id="top" class="top">
+            
+                   <h:form>
+                        <div id="Languages">
+                            <h:commandButton type="image"  image="resources/Image/English_Flag.png" style="width:20px;height:20px" action="#{internationalizationManagedBeans.setToEnglish()}"   />
+                            <h:commandButton type="image"  image="resources/Image/France_Flag.png" style="width:20px;height:20px"  action="#{internationalizationManagedBeans.setToFrench()}"  />
+                             <h:commandButton type="image"  image="resources/Image/Netherlands_Flag.png" style="width:20px;height:20px" value=""   /> 
+                       </div>
+                       <div id="menu">
+                         <h:commandButton   type="submit" value="#{msg.HomePage}" action ="faces/index.xhtml" /> 
+                         <h:commandButton  type="submit" value="#{msg.Who}" action ="faces/WhoAreWe.xhtml"/>
+                         <h:commandButton  type="submit" value="#{msg.Category}" action ="faces/Category.xhtml"/> 
+                         <h:commandButton  type="submit" value="#{msg.Discount}" /> 
+                       </div>
+                        <div id="right_div">
+                            <h:commandButton id="p" type="image" image="resources/Image/panier.png" style="width:30px;height:30px" />
+                           <h:commandButton id="r" type="submit" value="#{msg.Register}" action ="faces/Registration.xhtml"/> 
+                            <h:commandButton id="i" type="submit" value="#{msg.SignIn}" action ="faces/Identification.xhtml" />
+                        </div>
+                   </h:form>
+               
+            
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+    </h:body>
+   </f:view>
+</html>
