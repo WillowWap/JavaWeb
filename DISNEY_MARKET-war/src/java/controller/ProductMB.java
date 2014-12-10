@@ -65,6 +65,7 @@ public class ProductMB {
          {
              
               model_D.Product productModel = new  model_D.Product();
+             productModel.setReference(product.getReference());
              productModel.setFilePicture(product.getFilepicture());
              productModel.setLabel(translationproductFacade.findByProductAndLang(product.getReference(), langage));
              productListModel.add(productModel);
