@@ -1,9 +1,9 @@
 
 package sessionBeansPackage;
 
-import EntityPackage.Category;
-import EntityPackage.Languageapp;
-import EntityPackage.Translationcategory;
+import entity.Category;
+import entity.Languageapp;
+import entity.Translationcategory;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -23,6 +23,7 @@ public class TranslationcategoryFacade extends AbstractFacade<Translationcategor
     public TranslationcategoryFacade() {
         super(Translationcategory.class);
     }
+    @Override
     public String findLabel (short idCategory, String languages)
     {
         Query query; 

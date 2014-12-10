@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EntityPackage;
+package entity;
 
 import java.io.Serializable;
 import javax.persistence.Basic;
@@ -31,7 +31,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Translationproduct.findByCountry", query = "SELECT t FROM Translationproduct t WHERE t.country = :country"),
     @NamedQuery(name = "Translationproduct.findByGenre", query = "SELECT t FROM Translationproduct t WHERE t.genre = :genre"),
     @NamedQuery(name = "Translationproduct.findByTypevideogame", query = "SELECT t FROM Translationproduct t WHERE t.typevideogame = :typevideogame"),
-    @NamedQuery(name = "Translationproduct.findByProductAndLang", query = "SELECT t.label FROM Translationproduct t WHERE t.languageref.codelanguage = :codeLang AND t.productref.reference = :refProduct")})
+    @NamedQuery(name = "Translationproduct.findByProductAndLang", query = "SELECT t.label FROM Translationproduct t WHERE t.languageref.codelanguage = :codeLang AND t.productref.reference = :refProduct"),
+    @NamedQuery(name = "Translationproduct.findDetailByProductAndLang", query = "SELECT t.label, t.country, t.description, t.genre, t.typevideogame FROM Translationproduct t WHERE t.languageref.codelanguage = :codeLang AND t.productref.reference = :refProduct")})
 public class Translationproduct implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id

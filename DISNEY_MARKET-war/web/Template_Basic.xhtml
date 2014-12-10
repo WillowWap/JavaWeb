@@ -4,24 +4,24 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view locale="#{internationalizationManagedBeans.locale}">
      <f:loadBundle basename="languages.lang" var="msg"/>
-     <f:view locale="#{internationalizationManagedBeans.locale}">
+    
     
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <h:outputStylesheet name="./css/default.css"/>
         <h:outputStylesheet name="./css/cssLayout.css"/>
         <title>Disney market</title>
     </h:head>
 
-    <h:body>
+<h:body>
 
         <div id="top" class="top">
             
                    <h:form>
                         <div id="Languages">
-                            <h:commandButton type="image"  image="resources/Image/English_Flag.png" style="width:20px;height:20px" action="#{internationalizationManagedBeans.setToEnglish()}"   />
-                            <h:commandButton type="image"  image="resources/Image/France_Flag.png" style="width:20px;height:20px"  action="#{internationalizationManagedBeans.setToFrench()}"  />
+                            <h:commandButton type="image"  image="resources/Image/English_Flag.png" style="width:20px;height:20px" action="#{internationalizationManagedBeans.setToEnglish}"   />
+                            <h:commandButton type="image"  image="resources/Image/France_Flag.png" style="width:20px;height:20px"  action="#{internationalizationManagedBeans.setToFrench}"  />
                              <h:commandButton type="image"  image="resources/Image/Netherlands_Flag.png" style="width:20px;height:20px" value=""   /> 
                        </div>
                        <div id="menu">

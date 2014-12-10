@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <body>
 
@@ -17,7 +18,9 @@
                         <li>   
                             <h:commandButton type="image" image="#{product.filePicture}" style="width:50px;height:50px"/>
                             <h:outputLabel value="#{product.label}"/>
-                            <h:commandButton type="submit" value="#{msg.details}"/>
+                            <h:link type="button" value="#{msg.details}" outcome="faces/DetailProduct.xhtml">
+                                <f:param name ="idProduct" value="#{product.reference}"  />
+                             </h:link>
                         </li>
                         </c:forEach>
                  

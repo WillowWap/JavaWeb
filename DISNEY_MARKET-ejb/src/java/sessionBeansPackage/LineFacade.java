@@ -5,7 +5,7 @@
  */
 package sessionBeansPackage;
 
-import EntityPackage.Line;
+import entity.Line;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

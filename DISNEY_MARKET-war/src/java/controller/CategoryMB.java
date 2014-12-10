@@ -1,7 +1,7 @@
-package Controllers;
+package controller;
 
-import EntityPackage.Category;
-import EntityPackage.Translationcategory;
+import entity.Category;
+import entity.Translationcategory;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
@@ -20,16 +20,18 @@ public class CategoryMB {
     private CategoryFacadeLocal categoryFacade;
     @Inject
     private InternationalizationManagedBeans lang; 
-    
+     
     public CategoryMB() {
     }
+   
+    
      public ArrayList<model_D.Category> findAll ()
     {
         String label;
         Translationcategory translate;
-        String langage;
-        langage = lang.getLocale().getLanguage();
-        
+         String language = lang.getLocale().getLanguage();
+           System.out.println(language);
+           
         ArrayList <model_D.Category> modelCat = new ArrayList <model_D.Category>();
         List<Category> entityCat = categoryFacade.findAll();
         
@@ -39,7 +41,8 @@ public class CategoryMB {
             category.setIdCategory(cat.getIdcategory());
             category.setFilPicture(cat.getFilepicture());
             category.setDiscountRef(null);
-            label= translationcategoryFacade.findLabel(cat.getIdcategory(), langage);
+            label= translationcategoryFacade.findLabel(cat.getIdcategory(), language);
+          
             category.setLabel(label);
             modelCat.add(category);
         }

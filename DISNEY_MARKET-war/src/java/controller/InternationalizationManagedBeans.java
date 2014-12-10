@@ -3,17 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controllers;
+package controller;
 
 import javax.inject.Named;
 import javax.enterprise.context.SessionScoped;
 import java.io.Serializable;
 import java.util.Locale;
 
-/**
- *
- * @author Aude
- */
 @Named(value = "internationalizationManagedBeans")
 @SessionScoped
 public class InternationalizationManagedBeans implements Serializable {

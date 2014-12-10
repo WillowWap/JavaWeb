@@ -1,5 +1,5 @@
 
-package EntityPackage;
+package entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

@@ -11,19 +11,18 @@
         <ui:composition template="./Template_Basic.xhtml">
 
             <ui:define name="content">
-                <div>
+                <div id="categoryPage">
                 <c:forEach items ="#{categoryMB.findAll()}" var="category">
                     <h:form> 
-                        <h:link outcome="faces/Product.xhtml">
-                            <h:graphicImage value="#{category.filPicture}" /> 
-                              <f:param name ="categoryId" value="#{category.idCategory}"  />
-                         </h:link>
-                      <!--  <h:commandButton  type="image" image="#{category.getFilPicture()}" style="width:50px;height:50px" action ="faces/Product.xhtml">
-                            
-                        </h:commandButton> -->
-                        <h:outputLabel value="#{category.getLabel()}" />
-                  
-                  </h:form>
+                        <div id="categoryBloc">
+                            <h:link outcome="faces/Product.xhtml">
+                                <h:graphicImage value="#{category.filPicture}"  /> 
+                                  <f:param name ="categoryId" value="#{category.idCategory}"  />
+                            </h:link>
+                   
+                            <h:outputLabel value="#{category.getLabel()}" />
+                        </div>
+                    </h:form>
                 </c:forEach>
                 </div>
 

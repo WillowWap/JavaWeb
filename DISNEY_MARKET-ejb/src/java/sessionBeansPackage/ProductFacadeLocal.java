@@ -1,7 +1,7 @@
 
 package sessionBeansPackage;
 
-import EntityPackage.Product;
+import entity.Product;
 import java.util.List;
 import javax.ejb.Local;
 

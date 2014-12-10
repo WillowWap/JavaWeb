@@ -5,7 +5,7 @@
  */
 package sessionBeansPackage;
 
-import EntityPackage.Discount;
+import entity.Discount;
 import java.util.List;
 import javax.ejb.Local;
 

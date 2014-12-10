@@ -1,60 +1,126 @@
+@font-face{
+    font-family:'Gabriola';
+    src:url('../Font/Gabriola.ttf') format('truetype');
+    
+}
+@font-face{
+    font-family:'waltographUI';
+    src:url('../Font/waltographUI.ttf') format('truetype');
+    
+}
+//for the template
+
+.content{
+    background-color: #ffd77A;
+}
+
+body{
+   background-color: #ffd77A;
+}
+
+h1 {
+    font-family: 'waltographUI';
+    font-size:  50px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#entete{
+   background-color: #113acf;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width:100%;
+}
 
 #top {
-    position: relative;
-    background-color: #036fab;
-    color: white;
-    padding: 5px;
-    margin: 0px 0px 10px 0px;
+    position:absolute;
+    top: 0px;
+    right:0px;
 }
 
-#bottom {
-    position: relative;
-    background-color: #c2dfef;
-    padding: 5px;
-    margin: 10px 0px 0px 0px;
+#bannière ul{
+    display: inline-block;
+    height: 100%;
+    padding: 0;
 }
 
-#left {
-    float: left;
-    background-color: #ece3a5;
-    padding: 5px;
+#bannière ul li{
+    display:inline-block;
+    margin: 0px 0px 0px 3px;
+}
+
+nav {
+    width: 100%;
+    margin: 0px;  
+    
+    background-color: #48B5CE;
+    border-radius: 20px;
+    
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
     width: 150px;
+    height: 100%;
+    background-color:#48B5CE;
+    border: 3px solid #ffffff;
+    font-family: 'Gabriola';
+    font-size:23px;
+    font-weight: bold;
+    
 }
 
-#right {
-    float: right;
-    background-color: #ece3a5;
-    padding: 5px;
-    width: 150px;
+a:link {
+    text-decoration:none;
+    color: #113ACF;
 }
 
-.center_content {
+a:active {
+    text-decoration: none;
+    color: #113ACF;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #113ACF;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #113ACF;
+}
+
+//for the index page
+
+#accueil{
+
+}
+#accueil{
     position: relative;
-    background-color: #dddddd;
-    padding: 5px;
+    top:167px;
+    background-color: #48B5CE;
+    margin:0px 35px 0px 35px;
+    width:95%;
+    height:500px;
+    font-size: 40px;
+    color:#113acf;
+    text-align: center;
+    font-family: 'Gabriola';
+}
+#categoryPage{}
+#categoryPage{
+    position: relative;
+    top:167px;
 }
 
-.left_content {
-    background-color: #dddddd;
-    padding: 5px;
-    margin-left: 170px;
-}
-
-.right_content {
-    background-color: #dddddd;
-    padding: 5px;
-    margin: 0px 170px 0px 170px;
-}
-
-#top a:link, #top a:visited {
-  color: white;
-  font-weight : bold;
-  text-decoration: none;
-}
-
-#top a:link:hover, #top a:visited:hover  {
-  color: black;
-  font-weight : bold;
-  text-decoration : underline;
+#categoryBloc{
+    padding: 10px 10px 10px 10px;
+    border: black;
+    font-family:'Gabriola';
 }
 

@@ -5,7 +5,7 @@
  */
 package sessionBeansPackage;
 
-import EntityPackage.Ordercustomer;
+import entity.Ordercustomer;
 import java.util.List;
 import javax.ejb.Local;
 

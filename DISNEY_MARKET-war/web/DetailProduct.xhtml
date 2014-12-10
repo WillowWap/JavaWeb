@@ -3,16 +3,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
+
     <body>
 
         <ui:composition template="./Template_Basic.xhtml">
 
-
             <ui:define name="content">
-                     <div id="accueil">
-                        <p>Welcome on our website!</p>
-                    </div>
-               
+               <table>
+                    <ul>
+                        <h:outputLabel value="Price: "/><h:outputLabel value="#{detailProductMB.productModel.price}"/>
+                        <h:outputLabel value="Age"/><h:outputLabel value="#{detailProductMB.productModel.age}"/>
+
+                     </ul>
+                </table>
             </ui:define>
 
         </ui:composition>

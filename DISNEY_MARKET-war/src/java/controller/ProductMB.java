@@ -1,7 +1,7 @@
 
-package Controllers;
+package controller;
 
-import EntityPackage.Product;
+import entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;

@@ -5,7 +5,7 @@
  */
 package sessionBeansPackage;
 
-import EntityPackage.Languageapp;
+import entity.Languageapp;
 import java.util.List;
 import javax.ejb.Local;
 
